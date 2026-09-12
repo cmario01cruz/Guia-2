@@ -5,7 +5,7 @@ const rl = readline.createInterfate({
 });
 rl.question("Ingrese el peso del paquete en kilogramos: "; (peso) => {
     rl.question('Ingrese la tarifa por kilogramo en dólares: ', (tarifa) => {
-      peso = parseFloat((peso);
+      peso = parseFloat(peso);
         tarifa = parseFloat(tarifa);
 
         const costoBase = peso * tarifa;
