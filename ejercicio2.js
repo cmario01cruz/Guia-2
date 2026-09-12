@@ -1,11 +1,14 @@
 const readline = require('readline');
-const rl = readline.createInterfate({
+
+const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-rl.question("Ingrese el peso del paquete en kilogramos: "; (peso) => {
-    rl.question('Ingrese la tarifa por kilogramo en dólares: ', (tarifa) => {
-      peso = parseFloat(peso);
+
+rl.question("Ingrese el peso del paquete en kilogramos: ", (peso) => {
+    rl.question("Ingrese la tarifa por kilogramo en dólares: ", (tarifa) => {
+
+        peso = parseFloat(peso);
         tarifa = parseFloat(tarifa);
 
         const costoBase = peso * tarifa;
@@ -13,16 +16,16 @@ rl.question("Ingrese el peso del paquete en kilogramos: "; (peso) => {
         const costoMinimo = Math.floor(costoBase);
         const costoMaximo = Math.ceil(costoBase);
 
-        console.log('\n====================================');
-        console.log('       COTIZACIÓN DE ENVÍO');
-        console.log('====================================');
-        console.log('Peso:                         ' + peso.toFixed(2) + ' kg');
-        console.log('Tarifa por kilogramo:         $' + tarifa.toFixed(2));
-        console.log('Costo Base:                   $' + costoBase.toFixed(2));
-        console.log('Costo Redondeado Tradicional: $' + costoRedondeado.toFixed(2));
-        console.log('Costo Mínimo:                 $' + costoMinimo.toFixed(2));
-        console.log('Costo Máximo:                 $' + costoMaximo.toFixed(2));
-        console.log('====================================');
+        console.log("\n====================================");
+        console.log("       COTIZACIÓN DE ENVÍO");
+        console.log("====================================");
+        console.log("Peso:                         " + peso.toFixed(2) + " kg");
+        console.log("Tarifa por kilogramo:         $" + tarifa.toFixed(2));
+        console.log("Costo Base:                   $" + costoBase.toFixed(2));
+        console.log("Costo Redondeado Tradicional: $" + costoRedondeado.toFixed(2));
+        console.log("Costo Mínimo:                 $" + costoMinimo.toFixed(2));
+        console.log("Costo Máximo:                 $" + costoMaximo.toFixed(2));
+        console.log("====================================");
 
         rl.close();
     });
